@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D17667926D51FEC00EB6174 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17667826D51FEC00EB6174 /* Config.swift */; };
+		9D17667B26D520CC00EB6174 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17667A26D520CC00EB6174 /* HttpMethod.swift */; };
+		9D17667D26D521ED00EB6174 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17667C26D521ED00EB6174 /* Resource.swift */; };
+		9D17667F26D529C200EB6174 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17667E26D529C200EB6174 /* URLSession+Extension.swift */; };
 		9D4F3A0A26D20E460034ACE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F3A0926D20E460034ACE8 /* AppDelegate.swift */; };
 		9D4F3A0C26D20E460034ACE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F3A0B26D20E460034ACE8 /* SceneDelegate.swift */; };
 		9D4F3A0E26D20E460034ACE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F3A0D26D20E460034ACE8 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D17667826D51FEC00EB6174 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9D17667A26D520CC00EB6174 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		9D17667C26D521ED00EB6174 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		9D17667E26D529C200EB6174 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		9D4F3A0626D20E460034ACE8 /* App-Store-Search-Tap-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-Store-Search-Tap-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4F3A0926D20E460034ACE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4F3A0B26D20E460034ACE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,7 @@
 				9D4F3A0926D20E460034ACE8 /* AppDelegate.swift */,
 				9D4F3A0B26D20E460034ACE8 /* SceneDelegate.swift */,
 				9D4F3A0D26D20E460034ACE8 /* ViewController.swift */,
+				9D775AD826D2506C00AEB7F1 /* TestModel.swift */,
 				9D4F3A0F26D20E460034ACE8 /* Main.storyboard */,
 				9D4F3A1226D20E470034ACE8 /* Assets.xcassets */,
 				9D4F3A1426D20E470034ACE8 /* LaunchScreen.storyboard */,
@@ -76,7 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				9D4F3A1E26D20FC50034ACE8 /* ServiceProvider.swift */,
-				9D775AD826D2506C00AEB7F1 /* TestModel.swift */,
+				9D17667826D51FEC00EB6174 /* Config.swift */,
+				9D17667A26D520CC00EB6174 /* HttpMethod.swift */,
+				9D17667C26D521ED00EB6174 /* Resource.swift */,
+				9D17667E26D529C200EB6174 /* URLSession+Extension.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -151,8 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D17667D26D521ED00EB6174 /* Resource.swift in Sources */,
 				9D4F3A0E26D20E460034ACE8 /* ViewController.swift in Sources */,
 				9D4F3A1F26D20FC50034ACE8 /* ServiceProvider.swift in Sources */,
+				9D17667926D51FEC00EB6174 /* Config.swift in Sources */,
+				9D17667B26D520CC00EB6174 /* HttpMethod.swift in Sources */,
+				9D17667F26D529C200EB6174 /* URLSession+Extension.swift in Sources */,
 				9D4F3A0A26D20E460034ACE8 /* AppDelegate.swift in Sources */,
 				9D4F3A0C26D20E460034ACE8 /* SceneDelegate.swift in Sources */,
 				9D775AD926D2506C00AEB7F1 /* TestModel.swift in Sources */,
