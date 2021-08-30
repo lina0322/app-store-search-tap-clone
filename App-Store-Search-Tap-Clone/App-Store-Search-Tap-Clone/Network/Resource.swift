@@ -20,35 +20,35 @@ extension Resource where T: Codable {
         }
     }
 
-    init(url: String, parameters _parameters: [String: String]) {
+    init(url: String, parameters: [String: Any]) {
         var component = URLComponents(string: url)
-        var parameters = [URLQueryItem]()
-        for (key, value) in _parameters {
-            if key.isEmpty { continue }
-            parameters.append(URLQueryItem(name: key, value: value))
+        var componentParameters = [URLQueryItem]()
+        for (name,value) in parameters {
+            if name.isEmpty { continue }
+            componentParameters.append(URLQueryItem(name: name, value: "\(value)"))
         }
 
-        if !parameters.isEmpty {
-            component?.queryItems = parameters
+        if !componentParameters.isEmpty {
+            component?.queryItems = componentParameters
         }
-
-        if let url = component?.url {
-            self.urlRequest = URLRequest(url: url)
+        if let componentURL = component?.url {
+            self.urlRequest = URLRequest(url: componentURL)
         } else {
             self.urlRequest = URLRequest(url: URL(string: url)!)
         }
+
         self.parse = { data in
             try? JSONDecoder().decode(T.self, from: data)
         }
     }
 
-    init<Body: Encodable>(url: URL, method: HttpMethod<Body>) {
+    init<Body: Encodable>(postmodel: Body,url: URL, method: HttpMethod) {
         self.urlRequest = URLRequest(url: url)
-        self.urlRequest.httpMethod = method.method
+        self.urlRequest.httpMethod = method.rawValue
 
         switch method {
-        case .post(let body), .delete(let body), .patch(let body), .put(let body):
-            self.urlRequest.httpBody = try? JSONEncoder().encode(body)
+        case .post, .delete, .patch, .put:
+            self.urlRequest.httpBody = try? JSONEncoder().encode(postmodel)
             self.urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
             self.urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         default: break

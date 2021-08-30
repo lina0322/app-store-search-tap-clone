@@ -9,18 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var parameters: [String: String] {
-        let parameters: [String: String] = [
-            "term" : "카카오톡",
-            "country" : "kr",
-            "media" : "software"
-        ]
-        return parameters
-    }
+    var parameters: [String: String] = ["term" : "카카오톡", "country" : "kr", "media" : "software"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
         ServiceProvider.shared.getDataTest(parameters: self.parameters) { responseObjects in
             print(responseObjects)

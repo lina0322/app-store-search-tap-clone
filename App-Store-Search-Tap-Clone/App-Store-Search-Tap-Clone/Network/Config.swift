@@ -7,7 +7,6 @@
 
 import Foundation
 
-struct Config {
+enum Config {
     static let baseURL = "https://itunes.apple.com/search"
 }
-

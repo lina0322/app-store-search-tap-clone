@@ -19,6 +19,7 @@
 		9D4F3A1626D20E470034ACE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4F3A1426D20E470034ACE8 /* LaunchScreen.storyboard */; };
 		9D4F3A1F26D20FC50034ACE8 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F3A1E26D20FC50034ACE8 /* ServiceProvider.swift */; };
 		9D775AD926D2506C00AEB7F1 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D775AD826D2506C00AEB7F1 /* TestModel.swift */; };
+		9DE7D91926DD2B45004C31EA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7D91826DD2B45004C31EA /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9D4F3A1726D20E470034ACE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4F3A1E26D20FC50034ACE8 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		9D775AD826D2506C00AEB7F1 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		9DE7D91826DD2B45004C31EA /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				9D17667826D51FEC00EB6174 /* Config.swift */,
 				9D17667A26D520CC00EB6174 /* HttpMethod.swift */,
 				9D17667C26D521ED00EB6174 /* Resource.swift */,
+				9DE7D91826DD2B45004C31EA /* APIError.swift */,
 				9D17667E26D529C200EB6174 /* URLSession+Extension.swift */,
 			);
 			path = Network;
@@ -166,6 +169,7 @@
 				9D17667D26D521ED00EB6174 /* Resource.swift in Sources */,
 				9D4F3A0E26D20E460034ACE8 /* ViewController.swift in Sources */,
 				9D4F3A1F26D20FC50034ACE8 /* ServiceProvider.swift in Sources */,
+				9DE7D91926DD2B45004C31EA /* APIError.swift in Sources */,
 				9D17667926D51FEC00EB6174 /* Config.swift in Sources */,
 				9D17667B26D520CC00EB6174 /* HttpMethod.swift in Sources */,
 				9D17667F26D529C200EB6174 /* URLSession+Extension.swift in Sources */,
