@@ -8,12 +8,6 @@
 import Foundation
 
 struct NetworkManger {
-    private enum NetworkError: Error {
-        case invalidURL
-        case failureResponse(code: Int?)
-        case emptyData
-    }
-    
     enum HTTPMethod: String {
         case get
     }
@@ -42,11 +36,10 @@ struct NetworkManger {
                 completion(.failure(NetworkError.failureResponse(code: statusCode)))
                 return
             }
-            guard let data = data else {
-                completion(.failure(NetworkError.emptyData))
+            if let data = data {
+                completion(.success(data))
                 return
             }
-            completion(.success(data))
         }.resume()
     }
     
@@ -62,8 +55,10 @@ struct NetworkManger {
             }
             component.queryItems = queryItems
         }
-        
-        var urlRequest = URLRequest(url: component.url!)
+        guard let url = component.url else {
+            return nil
+        }
+        var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         return urlRequest
     }

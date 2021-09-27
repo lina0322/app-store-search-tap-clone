@@ -12,11 +12,11 @@ struct SearchResult: Decodable {
     let results: [Results]
 }
 
-struct Results : Codable {
+struct Results : Decodable {
     let trackName : String? // 어플 이름
     let genres : [String]? // 장르(짧은 소개글)
     let averageUserRating : Double? // 별점 점수
-    let userRatingCountForCurrentVersion: Int // 별점 준 사람 수
+    let userRatingCountForCurrentVersion: Int? // 별점 준 사람 수
     let formattedPrice : String? // 가격
     let version : String? // 업데이트 필요한지 확인하기위해
 }

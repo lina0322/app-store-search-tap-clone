@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchItem: Encodable {
+struct SearchItem {
     let term: String
     var country: String = "kr"
     var media: String = "software"

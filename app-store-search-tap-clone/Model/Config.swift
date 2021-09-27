@@ -8,5 +8,6 @@
 import Foundation
 
 enum Config {
-    static let baseURL = "https://itunes.apple.com/search"
+    static let baseURL = "https://itunes.apple.com/"
+    static let searchPath = "search"
 }
